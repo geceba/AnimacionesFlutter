@@ -23,16 +23,60 @@ class _GraficasCircularesPageState extends State<GraficasCircularesPage> {
           });
         },
       ),
-      body: Center(
-        child: Container(
-          width: 300,
-          height: 300,
-          child: RadialProgress(
-            percent: percent,
-            primaryColor: Colors.redAccent,
-            secondaryColor: Colors.grey,
-          ),
-        ),
+      body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                CustomRadialProgress(
+                  percent: percent,
+                  color: Colors.purple,
+                ),
+                CustomRadialProgress(
+                  percent: percent,
+                  color: Colors.green,
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                CustomRadialProgress(
+                  percent: percent,
+                  color: Colors.blue,
+                ),
+                CustomRadialProgress(
+                  percent: percent,
+                  color: Colors.red,
+                ),
+              ],
+            )
+          ]),
+    );
+  }
+}
+
+class CustomRadialProgress extends StatelessWidget {
+  final Color color;
+
+  const CustomRadialProgress({
+    Key key,
+    @required this.percent,
+    @required this.color,
+  }) : super(key: key);
+
+  final double percent;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 180,
+      height: 180,
+      child: RadialProgress(
+        percent: percent,
+        primaryColor: color,
+        secondaryColor: Colors.grey,
       ),
     );
   }
