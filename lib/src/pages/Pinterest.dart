@@ -75,7 +75,6 @@ class _PinterestGridState extends State<PinterestGrid> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     controller.addListener(() {
       if (controller.offset > lastScroll && controller.offset > 150) {
@@ -90,7 +89,6 @@ class _PinterestGridState extends State<PinterestGrid> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     controller.dispose();
     super.dispose();
   }

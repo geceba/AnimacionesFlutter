@@ -25,29 +25,6 @@ class PinterestMenu extends StatelessWidget {
       @required this.items
       });
 
-  /*final List<PinterestButton> items = [
-    PinterestButton(
-        icon: Icons.pie_chart,
-        onPressed: () {
-          print('Icon');
-        }),
-    PinterestButton(
-        icon: Icons.search,
-        onPressed: () {
-          print('Icon 2');
-        }),
-    PinterestButton(
-        icon: Icons.notifications,
-        onPressed: () {
-          print('Icon 3');
-        }),
-    PinterestButton(
-        icon: Icons.supervised_user_circle,
-        onPressed: () {
-          print('Icon 4');
-        }),
-  ];
- */
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
