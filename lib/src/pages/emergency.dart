@@ -42,7 +42,7 @@ class EmergencyPage extends StatelessWidget {
 
     List<Widget> itemsMap = items
         .map((item) => FadeInLeft(
-              duration: Duration(milliseconds: 250),
+              duration: Duration(milliseconds: 230),
               child: BotonGordo(
                 icon: item.icon,
                 text: item.texto,
